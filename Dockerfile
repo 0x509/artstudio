@@ -1,9 +1,11 @@
 # Dockerfile
-FROM node:11.13.0-alpine
+FROM node:20.11.1-alpine
 
 # create destination directory
 RUN mkdir -p /usr/src/artstudio
 WORKDIR /usr/src/artstudio
+
+ENV NODE_ENV=production
 
 # update and install dependency
 RUN apk update && apk upgrade
