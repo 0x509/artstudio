@@ -12,7 +12,7 @@ RUN apk add git
 # copy the app, note .dockerignore
 COPY . /usr/src/artstudio/
 RUN npm install
-RUN npx nuxt build
+RUN npm run build
 
 EXPOSE 3000
 
